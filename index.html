@@ -38,15 +38,15 @@
     .hidden-letter{display:none;margin-top:25px;animation:rise .8s ease both}
     .hidden-letter.show{display:block}
     @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .photo{min-height:190px;border:1px dashed #e94b5780;border-radius:18px;display:grid;place-items:center;text-align:center;padding:18px;background:linear-gradient(145deg,#3a1115aa,#ffffff05);color:#f6dce9}
-    .photo b{display:block;font-size:2rem;color:#ff747d;margin-bottom:10px}
-    .photo span{font:12px Arial,sans-serif;line-height:1.5}
+    .gallery{display:flex;justify-content:center}
+    .memory-card{width:min(520px,100%);margin:auto;text-align:center}
+    .memory-card img{display:block;width:100%;max-height:680px;object-fit:contain;border-radius:20px;border:1px solid #e94b5780;box-shadow:0 22px 70px #0009;background:#10090b}
+    .memory-caption{margin:14px 0 0;color:#f6dce9;font:13px Arial,sans-serif;letter-spacing:.04em}
     .footer{text-align:center;padding:40px 0 65px;color:#d9bfd4;font:12px Arial,sans-serif;letter-spacing:.08em}
     .music-note{font:12px Arial,sans-serif;color:#d9caca;text-align:center;margin-top:12px}
     .float-heart{position:fixed;bottom:-30px;z-index:5;pointer-events:none;animation:floatUp 5s linear forwards;color:#ed4652}
     @keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
-    @media(max-width:650px){.gallery{grid-template-columns:1fr}.photo{min-height:145px}.countdown{gap:7px}.time{padding:15px 4px}.intro{font-size:1rem}section{padding:55px 0}}
+    @media(max-width:650px){.countdown{gap:7px}.time{padding:15px 4px}.intro{font-size:1rem}section{padding:55px 0}}
   </style>
 </head>
 <body>
@@ -106,11 +106,12 @@
 
     <section class="wrap">
       <h2 class="section-title">Little moments, big feelings</h2>
-      <p class="sub">ADD YOUR FAVOURITE PHOTOS HERE</p>
+      <p class="sub">ONE MEMORY, KEPT CLOSE</p>
       <div class="gallery">
-        <div class="photo"><div><b>♡</b><span>Replace this card with your favourite photo together.</span></div></div>
-        <div class="photo"><div><b>✧</b><span>Add a picture that always makes you smile.</span></div></div>
-        <div class="photo"><div><b>♥</b><span>Save this space for a special memory.</span></div></div>
+        <figure class="memory-card">
+          <img src="blessings-memory.jpg" alt="A personal photo memory">
+          <figcaption class="memory-caption">A little moment worth remembering ♡</figcaption>
+        </figure>
       </div>
     </section>
   </main>
